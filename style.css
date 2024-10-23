@@ -1,15 +1,53 @@
 @charset "UTF-8";
 
-/**** breakpoints*****/
+/* Importando fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+/* Css reset (compatibilizado com todos navegadores)*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* Layout */
+body{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1em;   /*1em = 100% tamanho padrão*/
+}
+
+.container {
+    margin: 0 auto; /*margin 0 auto centraliza*/
+}
 
 /* Smartphones portrait >>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* Cabeçalho */
+header{
+    height: 80px;
+    background-color: brown;
+}
+
+#logo img{
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
-    body{
-        background-color: greenyellow;
+    /* Cabeçalho */
+    #logo img {
+        margin: 0px 0px 10px 0px;
+    }
+
+    .container {
+        max-width: 540px;
+        background-color: blueviolet;
     }
 }
 
@@ -17,20 +55,73 @@
 
 /* Tablet portrait >>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
-    body{
-        background-color: saddlebrown;
+    /* Cabeçalho */
+    .container {
+        max-width: 720px;
+        background-color: crimson;
+    }
+
+    header{
+        height: 110px;
+    }
+
+    #logo img{
+        width: 100px;
+        height: 100px;
     }
 }
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+    /* Cabeçalho */
+    .container {
+        max-width: 960px;
+        background-color: gold;
+    }
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+    /* Cabeçalho */
+    .container {
+        max-width: 1140px;
+        background-color: fuchsia;
+    }
+
+    header{
+        height: 150px;
+    }
+
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/* telas fullhd / 4K / smartTv >>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* Telas fullhd / 4K / smartTv >>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 1400px) {
+     
+    /* Cabeçalho */
+     .container {
+        max-width: 1360px;
+        background-color:crimson;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    #logo img {
+        width: 176px;
+        height: 176px;
+    }
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
