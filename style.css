@@ -3,39 +3,114 @@
 /* Importando fonte do google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-
-/* Css reset (compatibilizado com todos navegadores)*/
+/*Variaveis*/
+:root{
+    --azul:  #05152b;
+    --branco: #fff;
+    --vermelho: #ff0000;
+    --laranja: #FFA500;
+}
+/*CSS Reset (Compatibilizar em todos os navegadores) */
 *{
     margin: 0;
     padding: 0;
     border: 0;
 }
-
-
-/* Layout */
+/*Layout*/
 body{
-    font-family: "Comfortaa", sans-serif;
-    font-size: 1em;   /*1em = 100% tamanho padrão*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em; /*1em = 100%(Tamanho padrão)*/
 }
 
-.container {
-    margin: 0 auto; /*margin 0 auto centraliza*/
+.botao{
+    text-decoration: none;
+    color: var (--azul);
+    font-size: 1.3em;
+    background-color: var(--laranja);
+    font-weight: 700;
+    width: 200px;
+    padding: 9px 0px var;
+    border-radius: 25px;
+    align-self: center;
+    margin-top: 2px;
 }
+/*Smartphone Portrait>>>>>>>>>>>>>>>>>>>>>>*/
 
-/* Smartphones portrait >>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* Cabeçalho */
+/*Cabeçalho*/
 header{
     height: 80px;
-    background-color: brown;
+    
 }
-
 #logo img{
-    width: 70px;
-    height: 70px;
-    margin-top: 5px;
-    margin-left: 5px;
+    width: 80px;
+    height: 80px;
+    margin: 6px 0px 0px 10px;
+}
+#check{
+    display: none;
+}
+/*efeito de deslizar o menu.*/
+/*se check estiver "ticado", criar um estlio para ul*/
+#check:checked~ul{
+    right: 0px;
+}
+label{
+    font-size: 2em;
+    top: 30px;
+    right: 15px;
+    position: fixed;
+    color: #000000;
+}
+nav ul{
+    height: 100vh; /*100vh =  100% altura da tela*/
+    background-color: #ffaeaa94;
+    list-style: none; /*remove bullets*/
+    width: 65%;
+    position: fixed;
+    top: 80.1px;
+    right: -65%;
+    transition: all 0.5s;
+
+}
+nav ul li{
+    padding: 15px 20px ;
+    border-bottom: 1px solid var(--branco);
+    text-align: right;
+}
+nav ul li a{
+    color: #000000;
+    text-decoration: none;
+}
+.container {
+    display: 	flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; /*centralizar o bloco*/
+}
+/* Banner */
+main{
+    height: 50vh;
+    background: url(img/qualquer.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
+main h1, h2{
+    color: white;
+    text-shadow: #000000 0.05em 0.05em 0.05em; /* Sombra */
+    
+}
+main h1 {
+    font-size: 3em;
+}
+main iframe{
+    justify-content: center;
+    text-align: center;
+}
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -92,6 +167,7 @@ header{
         background-color: fuchsia;
     }
 
+    /* Cabeçalho */
     header{
         height: 150px;
     }
@@ -99,6 +175,29 @@ header{
     #logo img {
         width: 128px;
         height: 128px;
+    }
+
+    /* Transformação do menu */
+    label{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: transparent; /*Para deixar o fundo transparente*/
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+
+    }
+    nav ul li a{
+        color:var(--azul) ;
+    }
+
+    nav ul li a:hover{
+        color: var(--vermelho);
     }
 }
 
@@ -111,7 +210,7 @@ header{
     /* Cabeçalho */
      .container {
         max-width: 1360px;
-        background-color:crimson;
+        
     }
 
     header {
