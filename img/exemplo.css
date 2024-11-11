@@ -59,6 +59,7 @@ header {
     width: 80px;
     height: 80px;
     margin: 10px 0px 0px 10px;
+    margin-top: 10px;
 }
 
 #check {
@@ -108,7 +109,7 @@ nav ul li a {
 /* vídeo background */
 main {
     height: 55vh;
-    position: relative;    
+    position: relative;
 }
 
 main video {
@@ -119,10 +120,10 @@ main video {
 
 .destaque {
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     /* background é diferente de background-color */
-    background: rgba(0,0,0,0.5);
-    width: 100%; 
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 main h1,
@@ -130,7 +131,7 @@ h2 {
     color: var(--branco);
     /*sombra*/
     text-shadow: #000 0.05em 0.05em 0.05em;
-    margin: 5px 0px 0px 20px; 
+    margin: 5px 0px 0px 20px;
 }
 
 main h1 {
@@ -138,7 +139,7 @@ main h1 {
 }
 
 main h2 {
-    font-size: 1.2em;   
+    font-size: 1.2em;
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
