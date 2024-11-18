@@ -5,10 +5,17 @@
 
 /*Variaveis*/
 :root{
-    --azul:  #05152b;
+    --background: #0f0f0f;
     --branco: #fff;
-    --vermelho: #ff0000;
-    --laranja: #FFA500;
+    --amarelo: #e5b567;
+    --azul: #9cdcfe;
+    --azulEscuro: #05152b;
+    --cinzaClaro: #d6d6d6;
+    --cinza: #858585;
+    --laranja: #e87d3e;
+    --pink: #b05279;
+    --roxo: #9e86c8;
+    --verde: #b4d273;
 }
 /*CSS Reset (Compatibilizar em todos os navegadores) */
 *{
@@ -20,16 +27,25 @@
 body{
     font-family: "Open Sans", sans-serif;
     font-size: 1em; /*1em = 100%(Tamanho padrão)*/
+    background-color: var(--background);
+}
+.container {
+    margin: 0 auto;
+    /* centralizar o bloco */
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .botao{
     text-decoration: none;
-    color: var (--azul);
+    color: var (var(--branco));
+    border: 2px solid var(--branco);
     font-size: 1.3em;
     /* background-color: var(--laranja); */
     font-weight: 700;
     width: 200px;
-    padding: 9px 0px var;
+    padding: 9px 0px ;
     border-radius: 25px;
     align-self: center;
     margin-top: 2px;
@@ -52,14 +68,14 @@ header{
 /*efeito de deslizar o menu.*/
 /*se check estiver "ticado", criar um estlio para ul*/
 #check:checked~ul{
-    right: 0px;
+    right: 0;
 }
 label{
     font-size: 2em;
     top: 30px;
     right: 15px;
     position: fixed;
-    color: #000000;
+    color: #fff
 }
 nav ul{
     height: 100vh; /*100vh =  100% altura da tela*/
@@ -70,7 +86,7 @@ nav ul{
     top: 80.1px;
     right: -65%;
     transition: all 0.5s;
-
+    color: #fff;
 }
 nav ul li{
     padding: 15px 20px ;
@@ -112,6 +128,83 @@ main iframe{
     justify-content: center;
     text-align: center;
 }
+
+/******* Destaque *******/
+#destaque {
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+    /* espaçamento interno para não encostar na borda da tela do dispositivo */
+    padding: 50px 15px;
+}
+
+/* Atenção!!! Organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque */
+#destaque .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Para esconder a imagem usamos "display: none" no container da imagem | Para exibir novamente em telas maiores, usamos "display: block" */
+/*
+#imagemDestaque {
+    display: none;
+}
+*/
+#imagemDestaque img {
+    width: 200px;
+    height: 200px;
+    /* arredondar uma imagem quadrada */
+    border-radius: 50%;
+}
+
+#textoDestaque {
+    color: var(--branco);
+}
+
+#textoDestaque h2 {
+    margin-bottom: 20px;
+}
+
+/* Atenção !!! Detalhe do sinal ">" ref. ao elemento imediato */
+#textoDestaque>p {
+    margin-bottom: 15px;
+}
+
+.topicos {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.topicos img {
+    margin-right: 10px;
+}
+
+.topicos p {
+    font-weight: 600;
+}
+/*>>>>>>>>>>>>>>>>>> Sobre <<<<<<<<<<<<<<<<<<<*/
+#sobre .container{
+    flex-direction: column;
+}
+#sobre{
+    padding: 50px 15px;
+}
+#sobre h2, p{
+    color: #fff;
+}
+#sobre h2{
+    margin-bottom: 20px;
+}
+#video iframe {
+    width: 140px;
+    height: 191px;
+    margin-top: 20px;
+}
+#institucional{
+    text-align:left;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -119,6 +212,34 @@ main iframe{
     /* Cabeçalho */
     #logo img {
         margin: 0px 0px 10px 0px;
+    }
+    /****** Cabeçalho ******/
+    nav ul {
+        right: -25%;
+        width: 25%;
+    }
+
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    /****** destaque ******/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 256px;
+        height: 256px;
     }
 
     .container {
@@ -137,6 +258,11 @@ main iframe{
         /* background-color: crimson; */
     }
 
+    /****** Banner ******/
+    main {
+        height: 80vh;
+    }
+
     header{
         height: 110px;
     }
@@ -144,6 +270,12 @@ main iframe{
     #logo img{
         width: 100px;
         height: 100px;
+    }
+
+    /****** Destaque ******/
+    #imagemDestaque img {
+        width: 440px;
+        height: 440px;
     }
 }
 
@@ -155,6 +287,11 @@ main iframe{
     .container {
         max-width: 960px;
         /* background-color: gold; */
+    }
+
+    /****** Banner ******/
+    main {
+        height: 70vh;
     }
 }
 
@@ -191,14 +328,29 @@ main iframe{
     nav ul li{
         float: left;
         border: 0;
-        color: #000;
+        color: #fff;
     }
     nav ul li a{
-        color:var(--azul) ;
+        color:#fff ;
     }
 
     nav ul li a:hover{
         color: var(--vermelho);
+    }
+
+    /****** Destaque ******/
+    #destaque {
+        /* O código abaixo fixa o banner (efeito parallax) */
+        background-attachment: fixed;
+    }
+
+    /* Sobre */
+    #sobre .container{
+        flex-direction: row;
+        align-items: center;
+    }
+    #video iframe{
+        margin: 0;
     }
 }
 
