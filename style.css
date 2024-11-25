@@ -39,7 +39,7 @@ body{
 
 .botao{
     text-decoration: none;
-    color: var (var(--branco));
+    color: var(--branco);
     border: 2px solid var(--branco);
     font-size: 1.3em;
     /* background-color: var(--laranja); */
@@ -60,7 +60,7 @@ header{
 #logo img{
     width: 80px;
     height: 80px;
-    margin: 6px 0px 0px 10px;
+    
 }
 #check{
     display: none;
@@ -98,12 +98,7 @@ nav ul li a{
     color: #ffffff;
     text-decoration: none;
 }
-.container {
-    display: 	flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto; /*centralizar o bloco*/
-}
+
 /* Banner */
 main{
     height: 50vh;
@@ -186,6 +181,7 @@ main iframe{
 /*>>>>>>>>>>>>>>>>>> Sobre <<<<<<<<<<<<<<<<<<<*/
 #sobre .container{
     flex-direction: column;
+
 }
 #sobre{
     padding: 50px 15px;
@@ -197,12 +193,13 @@ main iframe{
     margin-bottom: 20px;
 }
 #video iframe {
-    width: 140px;
+    width: 340px;
     height: 191px;
     margin-top: 20px;
 }
+
 #institucional{
-    text-align:left;
+    flex-direction: column;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
