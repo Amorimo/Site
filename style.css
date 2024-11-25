@@ -58,8 +58,9 @@ header{
     
 }
 #logo img{
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
+    padding-top: 15px;
     
 }
 #check{
@@ -89,10 +90,11 @@ nav ul{
     color: #fff;
 }
 nav ul li{
-    padding: 15px 20px ;
+    padding: 65px 20px 0px 0px;
     border-bottom: 1px solid var(--branco);
     text-align: right;
     color: #fff;
+
 }
 nav ul li a{
     color: #ffffff;
@@ -193,9 +195,9 @@ main iframe{
     margin-bottom: 20px;
 }
 #video iframe {
-    width: 340px;
-    height: 191px;
-    margin-top: 20px;
+    width: 250px;
+    height: 200px;
+    margin-top: 0px;
 }
 
 #institucional{
@@ -347,6 +349,8 @@ main iframe{
         align-items: center;
     }
     #video iframe{
+        width: 420px;
+        height: 320px;
         margin: 0;
     }
 }
