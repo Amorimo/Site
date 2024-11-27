@@ -45,7 +45,7 @@ body{
     /* background-color: var(--laranja); */
     font-weight: 700;
     width: 200px;
-    padding: 9px 0px ;
+    padding: 9px 100px ;
     border-radius: 25px;
     align-self: center;
     margin-top: 2px;
@@ -103,7 +103,7 @@ nav ul li a{
 
 /* Banner */
 main{
-    height: 50vh;
+    height: 40vh;
     background: url(img/qualquer.gif);
     background-size: cover;
     background-position: center;
@@ -204,6 +204,33 @@ main iframe{
     flex-direction: column;
 }
 
+/* Faixa de destaque */
+#faixaDestaque{
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#faixaDestaque .container{
+    flex-direction: column;
+}
+
+#imagemFaixa img{
+    padding: 50px 15px;
+    width: 256px;
+    height: 256px;
+    border-radius: 75px;
+}
+
+#textoFaixa h2{
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+#textoFaixa p{
+    margin-bottom: 25px;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -220,7 +247,7 @@ main iframe{
 
     /****** Banner ******/
     main {
-        height: 100vh;
+        height: 90vh;
     }
 
     main h1 {
@@ -230,6 +257,7 @@ main iframe{
     /****** destaque ******/
     #destaque .container {
         flex-direction: row;
+        height: 75vh;
     }
 
     #imagemDestaque {
@@ -349,9 +377,27 @@ main iframe{
         align-items: center;
     }
     #video iframe{
-        width: 420px;
+        width: 485px;
         height: 320px;
         margin: 0;
+    }
+
+
+
+    /* Faixa de destaque */
+
+    #faixaDestaque{
+        background-attachment: fixed;
+    }
+
+    #faixaDestaque .container{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imagemFaixa img{
+        width: 312px;
+        height: 312;
     }
 }
 
