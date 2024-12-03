@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 /*Variaveis*/
-:root{
+:root {
     --background: #0f0f0f;
     --branco: #fff;
     --amarelo: #e5b567;
@@ -16,19 +16,24 @@
     --pink: #b05279;
     --roxo: #9e86c8;
     --verde: #b4d273;
+    --preto:#000000;
 }
+
 /*CSS Reset (Compatibilizar em todos os navegadores) */
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 }
+
 /*Layout*/
-body{
+body {
     font-family: "Open Sans", sans-serif;
-    font-size: 1em; /*1em = 100%(Tamanho padrão)*/
+    font-size: 1em;
+    /*1em = 100%(Tamanho padrão)*/
     background-color: var(--background);
 }
+
 .container {
     margin: 0 auto;
     /* centralizar o bloco */
@@ -37,7 +42,7 @@ body{
 
 }
 
-.botao{
+.botao {
     text-decoration: none;
     color: var(--branco);
     border: 2px solid var(--branco);
@@ -45,43 +50,51 @@ body{
     /* background-color: var(--laranja); */
     font-weight: 700;
     width: 200px;
-    padding: 9px 100px ;
+    padding: 9px 100px;
     border-radius: 25px;
     align-self: center;
     margin-top: 2px;
 }
+
 /*Smartphone Portrait>>>>>>>>>>>>>>>>>>>>>>*/
 
 /*Cabeçalho*/
-header{
+header {
     height: 80px;
-    
+
 }
-#logo img{
+
+#logo img {
     width: 76px;
     height: 76px;
     padding-top: 15px;
-    
+
 }
-#check{
+
+#check {
     display: none;
 }
-/*efeito de deslizar o menu.*/
-/*se check estiver "ticado", criar um estlio para ul*/
-#check:checked~ul{
+
+/* Efeito de deslizar o menu */
+/* Se check estiver "ticado", criar um estlio para ul */
+#check:checked~ul {
     right: 0;
 }
-label{
+
+label {
     font-size: 2em;
     top: 30px;
     right: 15px;
     position: fixed;
     color: #fff
 }
-nav ul{
-    height: 100vh; /*100vh =  100% altura da tela*/
+
+nav ul {
+    height: 100vh;
+    /*100vh =  100% altura da tela*/
     background-color: #000;
-    list-style: none; /*remove bullets*/
+    list-style: none;
+    /*remove bullets*/
     width: 65%;
     position: fixed;
     top: 80.1px;
@@ -89,20 +102,22 @@ nav ul{
     transition: all 0.5s;
     color: #fff;
 }
-nav ul li{
+
+nav ul li {
     padding: 65px 20px 0px 0px;
     border-bottom: 1px solid var(--branco);
     text-align: right;
     color: #fff;
 
 }
-nav ul li a{
+
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
 }
 
 /* Banner */
-main{
+main {
     height: 40vh;
     background: url(img/qualquer.gif);
     background-size: cover;
@@ -113,15 +128,19 @@ main{
     text-align: center;
 }
 
-main h1, h2{
+main h1,
+h2 {
     color: white;
-    text-shadow: #000000 0.05em 0.05em 0.05em; /* Sombra */
-    
+    text-shadow: #000000 0.05em 0.05em 0.05em;
+    /* Sombra */
+
 }
+
 main h1 {
     font-size: 3em;
 }
-main iframe{
+
+main iframe {
     justify-content: center;
     text-align: center;
 }
@@ -180,54 +199,61 @@ main iframe{
 .topicos p {
     font-weight: 600;
 }
+
 /*>>>>>>>>>>>>>>>>>> Sobre <<<<<<<<<<<<<<<<<<<*/
-#sobre .container{
+#sobre .container {
     flex-direction: column;
 
 }
-#sobre{
+
+#sobre {
     padding: 50px 15px;
 }
-#sobre h2, p{
+
+#sobre h2,
+p {
     color: #fff;
 }
-#sobre h2{
+
+#sobre h2 {
     margin-bottom: 20px;
 }
+
 #video iframe {
     width: 250px;
     height: 200px;
     margin-top: 0px;
 }
 
-#institucional{
+#institucional {
     flex-direction: column;
 }
 
 /* Faixa de destaque */
-#faixaDestaque{
+#faixaDestaque {
     background: url(img/background.png);
     background-size: cover;
     background-position: center;
     flex-direction: column;
 }
-#faixaDestaque .container{
+
+#faixaDestaque .container {
     flex-direction: column;
 }
 
-#imagemFaixa img{
+#imagemFaixa img {
     padding: 50px 15px;
     width: 256px;
     height: 256px;
     border-radius: 75px;
 }
 
-#textoFaixa h2{
+#textoFaixa h2 {
     color: var(--branco);
     margin-bottom: 10px;
 }
 
-#textoFaixa p{
+#textoFaixa p {
     margin-bottom: 25px;
 }
 
@@ -235,10 +261,12 @@ main iframe{
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
+
     /* Cabeçalho */
     #logo img {
         margin: 0px 0px 10px 0px;
     }
+
     /****** Cabeçalho ******/
     nav ul {
         right: -25%;
@@ -273,154 +301,217 @@ main iframe{
         max-width: 540px;
         /* background-color: blueviolet; */
     }
-}
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-
-/* Tablet portrait >>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 768px) {
-    /* Cabeçalho */
-    .container {
-        max-width: 720px;
-        /* background-color: crimson; */
+    /* Layout para 3 cartões */
+    
+    #conteudo .container{
+        flex-direction: column;
+        align-items: center;
     }
 
-    /****** Banner ******/
-    main {
-        height: 80vh;
+    .containerCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
-    header{
-        height: 110px;
+    .card {
+        width: 338px;
+        height: 520px;
+        margin-top: 25px;
+        background-color: var(--cinza);
+        border: 1px solid var(--rosachoque);
+        border-radius: 25px;
+        text-align: center;
     }
 
-    #logo img{
-        width: 100px;
-        height: 100px;
+    .card img {
+        border-radius: 25px 25px 0px 0px;
     }
 
-    /****** Destaque ******/
-    #imagemDestaque img {
-        width: 440px;
-        height: 440px;
-    }
-}
+    .card h3 {
+        font-size: 25px;
+        margin-top: 15px;
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-
-/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 992px) {
-    /* Cabeçalho */
-    .container {
-        max-width: 960px;
-        /* background-color: gold; */
     }
 
-    /****** Banner ******/
-    main {
-        height: 70vh;
-    }
-}
+    .card p {
+        text-align: justify;
+        padding: 20px 30px 40px 30px;
+        font-size: 18x;
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-
-/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 1200px) {
-    /* Cabeçalho */
-    .container {
-        max-width: 1140px;
-        /* background-color: fuchsia; */
     }
 
-    /* Cabeçalho */
-    header{
-        height: 150px;
-    }
-
-    #logo img {
-        width: 128px;
-        height: 128px;
-    }
-
-    /* Transformação do menu */
-    label{
-        display: none;
-    }
-    nav ul{
-        width: 100%;
-        height: auto;
-        position: static;
-        background-color: transparent; /*Para deixar o fundo transparente*/
-    }
-    nav ul li{
-        float: left;
+    .card a {
+        padding: 10px 100px;
         border: 0;
-        color: #fff;
-    }
-    nav ul li a{
-        color:#fff ;
+        background-color: var(--branco);
+        color: var(--preto);
     }
 
-    nav ul li a:hover{
-        color: var(--vermelho);
-    }
-
-    /****** Destaque ******/
-    #destaque {
-        /* O código abaixo fixa o banner (efeito parallax) */
-        background-attachment: fixed;
-    }
-
-    /* Sobre */
-    #sobre .container{
-        flex-direction: row;
-        align-items: center;
-    }
-    #video iframe{
-        width: 485px;
-        height: 320px;
-        margin: 0;
-    }
-
-
-
-    /* Faixa de destaque */
-
-    #faixaDestaque{
-        background-attachment: fixed;
-    }
-
-    #faixaDestaque .container{
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-
-    #imagemFaixa img{
-        width: 312px;
-        height: 312;
-    }
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/* Telas fullhd / 4K / smartTv >>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Tablet portrait >>>>>>>>>>>>>>>>>>>>>>>>>> */
+    @media (min-width: 768px) {
 
-@media (min-width: 1400px) {
-     
-    /* Cabeçalho */
-     .container {
-        max-width: 1360px;
-        
+        /* Cabeçalho */
+        .container {
+            max-width: 720px;
+            /* background-color: crimson; */
+        }
+
+        /****** Banner ******/
+        main {
+            height: 80vh;
+        }
+
+        header {
+            height: 110px;
+        }
+
+        #logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        /****** Destaque ******/
+        #imagemDestaque img {
+            width: 440px;
+            height: 440px;
+        }
+
+        /* Seção de conteudo */
+        .card {
+            margin: 0px 10px;
+        }
+
     }
 
-    header {
-        height: 200px;
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
+    @media (min-width: 992px) {
+
+        /* Cabeçalho */
+        .container {
+            max-width: 960px;
+            /* background-color: gold; */
+        }
+
+        /****** Banner ******/
+        main {
+            height: 70vh;
+        }
     }
 
-    #logo img {
-        width: 176px;
-        height: 176px;
-    }
-}
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>> */
+    @media (min-width: 1200px) {
+
+        /* Cabeçalho */
+        .container {
+            max-width: 1140px;
+            /* background-color: fuchsia; */
+        }
+
+        /* Cabeçalho */
+        header {
+            height: 150px;
+        }
+
+        #logo img {
+            width: 128px;
+            height: 128px;
+        }
+
+        /* Transformação do menu */
+        label {
+            display: none;
+        }
+
+        nav ul {
+            width: 100%;
+            height: auto;
+            position: static;
+            background-color: transparent;
+            /*Para deixar o fundo transparente*/
+        }
+
+        nav ul li {
+            float: left;
+            border: 0;
+            color: #fff;
+        }
+
+        nav ul li a {
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            color: var(--vermelho);
+        }
+
+        /****** Destaque ******/
+        #destaque {
+            /* O código abaixo fixa o banner (efeito parallax) */
+            background-attachment: fixed;
+        }
+
+        /* Sobre */
+        #sobre .container {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #video iframe {
+            width: 485px;
+            height: 320px;
+            margin: 0;
+        }
+
+
+
+        /* Faixa de destaque */
+
+        #faixaDestaque {
+            background-attachment: fixed;
+        }
+
+        #faixaDestaque .container {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        #imagemFaixa img {
+            width: 312px;
+            height: 312;
+        }
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* Telas fullhd / 4K / smartTv >>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    @media (min-width: 1400px) {
+
+        /* Cabeçalho */
+        .container {
+            max-width: 1360px;
+
+        }
+
+        header {
+            height: 200px;
+        }
+
+        #logo img {
+            width: 176px;
+            height: 176px;
+        }
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
