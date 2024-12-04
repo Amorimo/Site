@@ -27,6 +27,12 @@
 }
 
 /*Layout*/
+
+/* Rolagem suave */
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
@@ -54,6 +60,43 @@ body {
     border-radius: 25px;
     align-self: center;
     margin-top: 2px;
+}
+
+/* Layout para 3 cartões */
+.card {
+    width: 338px;
+    height: 520px;
+    margin-top: 25px;
+    background-color: var(--cinza);
+    border: 5px solid var(--branco);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 0;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 /*Smartphone Portrait>>>>>>>>>>>>>>>>>>>>>>*/
@@ -128,6 +171,9 @@ main {
     text-align: center;
 }
 
+h1{
+    color: white;
+}
 main h1,
 h2 {
     color: white;
@@ -235,6 +281,8 @@ p {
     background-size: cover;
     background-position: center;
     flex-direction: column;
+    padding-left: 8px;
+    padding-bottom: 5px;
 }
 
 #faixaDestaque .container {
@@ -255,6 +303,36 @@ p {
 
 #textoFaixa p {
     margin-bottom: 25px;
+}
+
+/****** Seção de conteúdo (cards) ******/
+#conteudo {
+    padding: 50px 0px;
+}
+
+#conteudo .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteudo h2 {
+    color: var(--branco);
+    margin-bottom: 25px;
+}
+
+#todos {
+    color: var(--branco);
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -383,9 +461,9 @@ p {
             height: 440px;
         }
 
-        /* Seção de conteudo */
+       /****** Seção de conteúdo - cards ******/
         .card {
-            margin: 0px 10px;
+            margin: 25px 10px 0px 10px;
         }
 
     }

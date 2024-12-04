@@ -12,7 +12,7 @@
 
 <body>
     <!--Cabeçalho-->
-    <header class="container">
+    <header class="container" id="inicio">
 
         <!--Logotipo-->
         <div id="logo">
@@ -25,9 +25,9 @@
             <label for="check">&#x268c;</label>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#"></a>Sobre</li>
-                <li><a href="#"></a>Conteúdo</li>
-                <li><a href="#"></a>Contato</li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#conteudo">Conteúdo</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -65,6 +65,8 @@
             </div>
         </div>
     </section>
+    
+    <!-- Sobre -->
     <section id="sobre">
         <div class="container">
         <div id="institucional">
@@ -98,33 +100,70 @@
     <!-- Conteúdo Cartões -->
     <section id="conteudo">
         <div class="container">
-            <h2> Mais Jogados </h2>
-            <div class="containercards">
-
+            <h2>Mais Jogados</h2>
+            <div class="containerCards">
                 <div class="card">
                     <img src="img/cs2.jpg" alt="cs2">
-                    <h3> Counter-Strike 2 </h3>
-                    <p>Counter-Strike 2 (CS2) é a versão atualizada e aprimorada do clássico jogo de tiro em primeira pessoa Counter-Strike: Global Offensive (CS:GO), desenvolvido pela Valve. Lançado em 2023, CS2 utiliza a poderosa engine Source 2, trazendo melhorias significativas nos gráficos, na física e no desempenho.</p>
-                 <a href="#" class="botao"> Detalhes </a>
+                    <h3>Counter-Strike 2</h3>
+                    <p>Counter-Strike 2 (CS2) é a versão atualizada e aprimorada do clássico jogo de tiro em primeira</p>
+                    <br> <!-- Quebra de linha -->
+                    <a href="#" class="botao">Saiba +</a>
                 </div>
-
                 <div class="card">
-                    <img src="img/hearthstone.jpg" alt="espresso mocha com leite condensado">
-                    <h3>Hearthstone: Heroes of Warcraft</h3>
-                    <p>Hearthstone é um jogo de cartas colecionáveis online desenvolvido pela Blizzard Entertainment, ambientado no universo de Warcraft. Lançado em 2014, é gratuito para jogar e combina estratégia com mecânicas simples e intuitivas, tornando-o acessível tanto para jogadores casuais quanto para competidores hardcore.</p>
-                    <a href="#" class="botao"> Detalhes </a>
+                    <img src="img/hearthstone.jpg" alt="hearthstone">
+                    <h3>Hearthstone</h3>
+                    <p>Hearthstone é um jogo de cartas colecionáveis online desenvolvido pela Blizzard Entertainment</p>
+                    <br>
+                    <a href="#" class="botao">Saiba +</a>
                 </div>
-
                 <div class="card">
-                    <img src="img/lol.jpg" alt="dunuts de sabores variados">
+                    <img src="img/lol.jpg" alt="lol">
                     <h3>League of Legends</h3>
-                    <p>League of Legends (LoL) é um jogo online do gênero MOBA (Multiplayer Online Battle Arena), desenvolvido pela Riot Games e lançado em 2009. Desde então, tornou-se um dos jogos mais populares do mundo, com uma base de jogadores gigantesca e uma cena competitiva altamente prestigiada.</p>
-                    <a href="#" class="botao"> Detalhes </a>
+                    <p>League of Legends (LoL) é um jogo online do gênero MOBA (Multiplayer Online Battle Arena)</p>
+                    <a href="#" class="botao">Saiba +</a>
                 </div>
-
             </div>
+            <a href="#" id="todos">Conheça todos >></a>
         </div>
     </section>
+
+    <!-- Contato -->
+    <address>
+        <div class="container">
+           <div id="contato">
+            <h1>Contato</h1>
+            <h2>Email</h2>
+            <a href="mailto:matheus.a.amorim10@gmail.com?subject=Contato do site!"><img src="img/email.png" alt="email">matheus.a.amorim10@gmail.com</a>
+            <hr>
+            <a href="https://api.whatsapp.com/send?phone=5511977643231" target="_blank">
+                <img src="img/whatsapp.png" alt="whatsapp" title="Abrir no WhatsApp">
+                <p>(11) 12356-1312</p>
+            </a>
+           </div>
+           <div id="local">
+            <h2>Mapa</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12301.91448588303!2d-46.687954127312864!3d-23.554753924194983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575858b6a5b9%3A0xc5b1a9636043ff22!2sBeco%20do%20Batman!5e0!3m2!1spt-BR!2sbr!4v1733343090738!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        </div>
+    </address>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div id="copyright">
+                <p>©2024 - Matheus Amorim</p>
+            </div>
+            <div id="social">
+                <img src="img/youtube.png" alt="youtube">
+                <img src="img/instagram.png" alt="instagram">
+                <img src="img/twitter.png" alt="twitter">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Topo do site -->
+     <a href="#inicio" id=topo><img src="img/topo.png" alt=""></a>
 </body>
 
 </html>
