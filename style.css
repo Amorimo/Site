@@ -335,6 +335,57 @@ p {
    
 }
 
+/* Contato e mapa */
+
+address .container{
+    flex-direction: column;
+    
+    justify-content: left;
+    padding: 35px 10px 50px 10px;
+}
+
+
+address a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address img {
+    padding-top: 15px;
+}
+
+#mapinha{
+    display: none;
+}
+
+#contato img{
+    padding: 0;
+}
+
+#local{
+    display: none;
+}
+
+address h2{
+    padding-top:15px ;
+}
+#numero{
+    padding-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    padding: 50px 0px;
+    background-color: #343538;
+    font-size: 0.875em;
+    color: #fff;
+    text-align: center;
+}
+footer .container{
+    flex-direction: column-reverse;
+}
+
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* Smartphones Landscape >>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -427,6 +478,18 @@ p {
         background-color: var(--branco);
         color: var(--preto);
     }
+
+    /* Rodapé */
+    
+    footer .container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #social {
+        margin: 0;
+      }
 
 }
 
@@ -567,6 +630,40 @@ p {
         #imagemFaixa img {
             width: 312px;
             height: 312;
+        }
+
+        /* Contato */
+        address {
+            padding-top: 50px;
+        }
+        #flex6{
+            flex-direction: column-reverse;
+        }
+
+        #mapinha{
+            display: inline;
+            display: block;
+        }
+
+        #mapao{
+            display: none;
+        }
+
+        #local{
+            display: inline;
+            display: block;
+            
+        }
+        
+        #local iframe{
+            width: 400px;
+            height: 300px;
+        }
+       
+
+        /* Rodapé */
+        footer .container{
+            flex-direction:row ;
         }
     }
 
