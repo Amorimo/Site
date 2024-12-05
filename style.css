@@ -468,7 +468,7 @@ footer .container{
     .card p {
         text-align: justify;
         padding: 20px 30px 40px 30px;
-        font-size: 18x;
+        font-size: 18px;
 
     }
 
@@ -596,6 +596,10 @@ footer .container{
             color: var(--vermelho);
         }
 
+        #lolzin{
+            margin-bottom: 17px;
+        }
+
         /****** Destaque ******/
         #destaque {
             /* O código abaixo fixa o banner (efeito parallax) */
@@ -629,7 +633,7 @@ footer .container{
 
         #imagemFaixa img {
             width: 312px;
-            height: 312;
+            height: 312px;
         }
 
         /* Contato */
