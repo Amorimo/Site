@@ -565,6 +565,7 @@ footer .container{
         }
 
         #logo img {
+            
             width: 128px;
             height: 128px;
         }
@@ -668,6 +669,11 @@ footer .container{
         /* Rodapé */
         footer .container{
             flex-direction:row ;
+        }
+
+        #social img{
+            padding-left: 5px;
+            padding-right:5px ;
         }
     }
 
